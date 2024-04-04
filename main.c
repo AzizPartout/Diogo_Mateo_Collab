@@ -2,64 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-#define MAX_EQUIPES 100
-#define MAX_JOUEURS 100
-#define MAX_SIZE 100
-
-
-// Structure pour les equipes   
-struct Equipe {
-    int id;
-    char nom[MAX_SIZE];
-    char prenom[MAX_SIZE];
-    int supprime;
-};
-
-// Structure pour les joueurs
-struct Joueur {
-    int id;
-    int id_Equipe;
-    char nom[MAX_SIZE];
-    char prenom[MAX_SIZE];
-    int supprime;
-};
-
-// Tableau de structures pour les equipes
-struct Equipe tableau_Equipes[MAX_EQUIPES];
-
-// Prototypes des fonctions avant leur définition
-void ajouter_Equipe(int* nb_Equipes);
-void ajouter_Joueur(int* nb_Joueurs);
-void supprimer_Equipe(int* nb_Equipes);
-void supprimer_Joueur(int* nb_Joueurs);
-void afficher_Equipes(struct Equipe tableau_Equipes[], int nb_Equipes);
-void afficher_Joueurs(struct Joueur tableau_Joueurs[], int nb_Joueurs);
-void afficher_Joueur_details(struct Joueur tableau_Joueurs[], int nb_Joueurs);
-
-// Tableau de structures pour les joueurs
-struct Joueur tableau_Joueurs[MAX_JOUEURS];
-
-// Fonction pour ajouter une equipe
-void ajouter_Equipe(int* nb_Equipes) {
-    if (*nb_Equipes < MAX_EQUIPES) {
-        printf("Entrer l'identifiant de l'equipe: ");
-        scanf("%d", &tableau_Equipes[*nb_Equipes].id);
-        fflush(stdin);
-        getchar(); // Ajout pour vider le tampon de stdin
-        printf("Entrer le nom de l'equipe :");
-        fgets(tableau_Equipes[*nb_Equipes].nom, MAX_SIZE, stdin);
-        tableau_Equipes[*nb_Equipes].nom[strcspn(tableau_Equipes[*nb_Equipes].nom, "\n")] = 0; // Suppression du caractère de retour à la ligne dans le nom de l'equipe
-        printf("Entrer le diminutif de l'equipe :");
-        fgets(tableau_Equipes[*nb_Equipes].prenom, MAX_SIZE, stdin);
-        tableau_Equipes[*nb_Equipes].prenom[strcspn(tableau_Equipes[*nb_Equipes].prenom, "\n")] = 0;
-        tableau_Equipes[*nb_Equipes].supprime = 0;//initialisation de variable a 0
-        (*nb_Equipes)++;//incrémentation
-    }
-    else {
-        printf("Erreur : le tableau d'equipes est plein.\n");
-    }
-}
+#include "../headers/structures.h"
 
 // Fonction pour ajouter un joueur
 void ajouter_Joueur(int* nb_Joueurs) {
@@ -83,19 +26,6 @@ void ajouter_Joueur(int* nb_Joueurs) {
     }
 }
 
-// Fonction pour supprimer une equipe
-void supprimer_Equipe(int* nb_Equipes) {
-    int id;
-    printf("Entrer l'identifiant de l'equipe à supprimer : ");
-    scanf("%d", &id);
-    for (int i = 0; i < *nb_Equipes; i++) {
-        if (tableau_Equipes[i].id == id && !tableau_Equipes[i].supprime) {
-            tableau_Equipes[i].supprime = 1;
-            break;
-        }
-    }
-}
-
 // Fonction pour supprimer un joueur
 void supprimer_Joueur(int* nb_Joueurs) {
     int id;
@@ -105,18 +35,6 @@ void supprimer_Joueur(int* nb_Joueurs) {
         if (tableau_Joueurs[i].id == id && !tableau_Joueurs[i].supprime) {//verification joueur supprimé
             tableau_Joueurs[i].supprime = 1;
             break;
-        }
-    }
-}
-
-// Fonction pour afficher toutes les equipes
-void afficher_Equipes(struct Equipe tableau_Equipes[], int nb_Equipes) {
-    for (int i = 0; i < nb_Equipes; i++) {
-        if (!tableau_Equipes[i].supprime) {
-            printf("Identifiant de l'equipe : %d\n", tableau_Equipes[i].id);
-            printf("Nom de l'equipe : %s\n", tableau_Equipes[i].nom);
-            printf("diminutif de l'equipe : %s\n", tableau_Equipes[i].prenom);
-            printf("---------------------\n");
         }
     }
 }
