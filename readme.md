@@ -1,5 +1,5 @@
 # Langage et logique de programmation 2
-Collaboration d'étudiant sur Github pour un cours sur le langage C de l'HEPL :sleeping:
+Collaboration d'étudiants sur Github pour un cours sur le langage C de l'HEPL :sleeping:
 
 ## :clap: Comment participer ?
 
@@ -12,14 +12,15 @@ $ ./main  // Pour lancer l'exécutable
 ```
 
 ### Git & github
-D'abord il faut cloner le projet sur votre IDE (VSC, Visual Code) [repo github](https://github.com/AzizPartout/Diogo_Mateo_Collab).
-> Remarque : Il faut faire partie des collaborators du repository github pour par la suite pouvoir push tes modifications. 
-Pour ça, créez un dossier, ouvrez-le sur VSC, ouvrez un terminal et faites la commande :
+D'abord il faut cloner le [projet](https://github.com/AzizPartout/Diogo_Mateo_Collab) sur votre IDE (VSC, Visual Code).
+> <span style="color:red">Remarque</span> : Il faut faire partie des collaborators du repository pour pouvoir push tes modifications par la suite. 
+Pour ça, créez un dossier, ouvrez-le sur votre IDE, ouvrez un terminal et faites la commande :
 ```
 git clone https://github.com/AzizPartout/Diogo_Mateo_Collab.git
 ```
 Ensuite, regardez la vidéo [Apprendre à utiliser GIT](https://www.youtube.com/watch?v=A5_kJps4qjc) pour plus d'explications.
->IMPORTANT : A chaque fois que vous revenez travailler sur le projet faites un git pull pour reprendre toutes les modifications apportées par les autres. Ensuite travailler sur la branche de la feature sur laquelle vous voulez travailler ! Ne travaillez pas sur le main. Ensuite faites un git push à chaque fois que vous arrêtez de travailler sur le projet (genre à chaque fin de journée).
+
+><span style="color:red">IMPORTANT</span> : A chaque fois que vous revenez travailler sur le projet faites un git pull pour reprendre toutes les modifications apportées par les autres. Ensuite travailler sur la branche de la feature sur laquelle vous voulez travailler ! Ne travaillez pas sur le main. Ensuite faites un git push à chaque fois que vous arrêtez de travailler sur le projet (genre à chaque fin de journée).
 
  ## :tongue: Structure du programme
 Séparez votre programme en plusieurs petits fichiers pour faciliter la compréhension.
