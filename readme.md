@@ -13,7 +13,8 @@ $ ./main  // Pour lancer l'exécutable
 
 ### Git & github
 D'abord il faut cloner le [projet](https://github.com/AzizPartout/Diogo_Mateo_Collab) sur votre IDE (VSC, Visual Code).
->**Remarque** : Il faut faire partie des collaborators du repository pour pouvoir push tes modifications par la suite. 
+>**Remarque** : Il faut faire partie des collaborators du repository pour pouvoir push tes modifications par la suite.
+
 Pour ça, créez un dossier, ouvrez-le sur votre IDE, ouvrez un terminal et faites la commande :
 ```
 git clone https://github.com/AzizPartout/Diogo_Mateo_Collab.git
