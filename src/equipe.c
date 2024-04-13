@@ -1,6 +1,7 @@
 #include "../headers/structures.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 // Fonction pour ajouter une equipe
 void ajouter_Equipe(int* nb_Equipes) {
